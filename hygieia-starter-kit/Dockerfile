@@ -27,8 +27,8 @@ COPY /api/* /hygieia/api/
 COPY /system/* /etc/systemd/system/
 COPY /collectors/* /hygieia/collectors/
 COPY /ui/httpd.conf /etc/httpd/conf/
-ADD /certs/* /hygieia/cacerts/
-ADD /properties-builder.sh /hygieia/
+#COPY /certs/* /hygieia/cacerts/
+COPY /properties-builder.sh /hygieia/
 
 # For adding certs
 RUN ls -1 /hygieia/cacerts | while read cert; do \
